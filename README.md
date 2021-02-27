@@ -24,3 +24,30 @@ Como se explicó en el resumen del principio, el usuario podrá subir archivos a
 
 Si un usuario lo desea, podrá dar acceso de sus archivos a otros usuarios, para ello, deberá proveer el nombre del usuario con el que se desea compartir el archivo y la clave de desencriptado del mismo. Esta clave será enviada al servidor encriptada con la clave pública del usuario al que se le desea compartir y se almacenará en el servidor. De esta manera, la clave será compartida de forma segura y el servidor no tendrá forma de ver dicha clave.
 
+## Instalación
+
+1 - Se necesitarán las siguientes librerías para el correcto funcionamiento de este programa:
+
+* pycryptodome (o pycrypto en versiones viejas de python)
+* cryptography
+* hashlib
+
+2 - Ir por consola hasta la carpeta "server" y ejecutar el siguiente comando:
+
+```
+python server.py
+```
+
+3 - Una vez teniendo el servidor corriendo, abrimos otra consola, nos paramos en la carpeta "client" y ejecutamos el siguiente comando:
+
+```
+python client.py
+```
+
+## Notas adicionales:
+
+* El servidor es multihilo, por lo que se pueden tener de 1 a más clientes simultáneamente conectados.
+
+* Tanto el cliente como el servidor pueden ser ejecutados en cualquier computadora, esto quiere decir que se puede correr el servidor en una computadora y el cliente en una o varias computadoras distintas y se conectarán a través de TCP.
+
+
